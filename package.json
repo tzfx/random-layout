@@ -1,0 +1,23 @@
+{
+    "name": "random-layout",
+    "version": "1.0.0",
+    "description": "Keyboard layout randomizer",
+    "main": "dist/random-layout.js",
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "start": "ts-node ./random-layout.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "adamv.stadler@gmail.com",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^9.0.0",
+        "random-js": "^2.1.0",
+        "yaml": "^1.10.2"
+    },
+    "devDependencies": {
+        "@tsconfig/node14": "^1.0.1",
+        "@types/node": "^17.0.18",
+        "ts-node": "^10.5.0"
+    }
+}
