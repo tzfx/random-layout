@@ -202,7 +202,7 @@
         "affectsGlobalScope": false
       },
       "../lib/layout/qwerty.ts": {
-        "version": "9bf97c4b8f1400c2cabc391f682735db2efb22a4bc6b070ab63579b0146145be",
+        "version": "077a13280e476831a8f9b402c216c87129b42d2a548f03c1cde7b616c56ed1bc",
         "signature": "5d51a74f6f114eeff32d3db4953999148462fb538478f042a054ada7a087b823",
         "affectsGlobalScope": false
       },
@@ -351,8 +351,13 @@
         "signature": "665300011b564c5c9c1e0caa1f9971bf7d14982f0dff8e0e491ca8454d3c9c52",
         "affectsGlobalScope": false
       },
+      "../lib/layout/dvorak.ts": {
+        "version": "97d6cef099bcf870b36f64eac842274d39248a106e0fedc92163e528624b0fb0",
+        "signature": "c189a2642338ee5d3db87b708a3a4b2f9574cd35cd0be63c515bd1619ab31096",
+        "affectsGlobalScope": false
+      },
       "../random-layout.ts": {
-        "version": "802b951181b0ab6741c853444fb49fa8e5577dd3a61385106412c65d84c70563",
+        "version": "8adea13c5dcc4e79fb0d76b449e229f33f3287a26f48edc6a5f7ed6d4010ae51",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -629,6 +634,10 @@
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
+      "../lib/layout/dvorak.ts": [
+        "../lib/layout/layout.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../lib/layout/layout.ts": [
         "../node_modules/@types/node/util.d.ts"
       ],
@@ -1109,6 +1118,7 @@
         "../node_modules/random-js/dist/types.d.ts"
       ],
       "../random-layout.ts": [
+        "../lib/layout/dvorak.ts",
         "../lib/layout/qwerty.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/commander/typings/index.d.ts",
@@ -1230,6 +1240,9 @@
       ]
     },
     "exportedModulesMap": {
+      "../lib/layout/dvorak.ts": [
+        "../lib/layout/layout.ts"
+      ],
       "../lib/layout/qwerty.ts": [
         "../lib/layout/layout.ts"
       ],
@@ -1821,6 +1834,7 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../lib/layout/dvorak.ts",
       "../lib/layout/layout.ts",
       "../lib/layout/qwerty.ts",
       "../node_modules/@types/node/assert.d.ts",

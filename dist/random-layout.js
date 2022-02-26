@@ -3,13 +3,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var commander_1 = require("commander");
 var qwerty_1 = require("./lib/layout/qwerty");
 var random_js_1 = require("random-js");
+var dvorak_1 = require("./lib/layout/dvorak");
 commander_1.program.name("random-layout")
     .description("Randomize the alphanumeric section of your keyboard.")
     .version("1.0.0");
 commander_1.program.option("-l --layout", "set layout", "qwerty").option("--all", "randomize all keys instead of just by row.");
 var opts = commander_1.program.parse(process.argv).showHelpAfterError().opts();
 var engine = random_js_1.nodeCrypto;
-var board = opts.layout === "querty" ? new qwerty_1.Qwerty() : new qwerty_1.Qwerty();
+var board = opts.layout === "querty"
+    ? new qwerty_1.Qwerty()
+    : opts.layout === "dvorak"
+        ? new dvorak_1.Dvorak()
+        : new qwerty_1.Qwerty();
 console.log("Randomizing layout (" + board.name + ")");
 console.log("------------");
 if (opts.all) {

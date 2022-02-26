@@ -13,21 +13,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Qwerty = void 0;
+exports.Dvorak = void 0;
 var layout_1 = require("./layout");
-var Qwerty = /** @class */ (function (_super) {
-    __extends(Qwerty, _super);
-    function Qwerty() {
+var Dvorak = /** @class */ (function (_super) {
+    __extends(Dvorak, _super);
+    function Dvorak() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.name = "QWERTY";
+        _this.name = "Dvorak";
         _this.keys = {
-            "Row 1": "1234567890-=".split(""),
-            "Row 2": "qwertyuiop[]|".split(""),
-            "Row 3": "asdfghjkl;'".split(""),
-            "Row 4": "zxcvbnm,./".split(""),
+            "Row 1": "1234567890[]".split(""),
+            "Row 2": "',.pyfgcrl/=".split(""),
+            "Row 3": "aoeuidhtns-".split(""),
+            "Row 4": ";qjkxbmwvz".split(""),
         };
         return _this;
     }
-    return Qwerty;
+    return Dvorak;
 }(layout_1.Layout));
-exports.Qwerty = Qwerty;
+exports.Dvorak = Dvorak;

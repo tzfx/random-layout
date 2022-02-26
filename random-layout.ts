@@ -1,6 +1,7 @@
 import { program as main } from "commander";
 import { Qwerty } from "./lib/layout/qwerty";
 import { nodeCrypto, shuffle } from "random-js";
+import { Dvorak } from "./lib/layout/dvorak";
 
 main.name("random-layout")
     .description("Randomize the alphanumeric section of your keyboard.")
@@ -15,7 +16,12 @@ const opts = main.parse(process.argv).showHelpAfterError().opts();
 
 const engine = nodeCrypto;
 
-const board = opts.layout === "querty" ? new Qwerty() : new Qwerty();
+const board =
+    opts.layout === "querty"
+        ? new Qwerty()
+        : opts.layout === "dvorak"
+        ? new Dvorak()
+        : new Qwerty();
 
 console.log(`Randomizing layout (${board.name})`);
 console.log(`------------`);

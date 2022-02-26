@@ -2,7 +2,7 @@
 
 This is a node-based console application that prints out a shuffled alpha area for a keyboard layout.
 
-By default, this will shuffle internal to layout rows, to keep a common profile. This behaviour can be override with the `--all` option.
+By default, this will shuffle internal to layout rows, to keep a common profile. This behaviour can be overriden with the `--all` option.
 
 ## To run
 
